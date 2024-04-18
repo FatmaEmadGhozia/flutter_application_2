@@ -51,11 +51,11 @@ class ForgotPassPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue, width: 2),
+                    borderSide: BorderSide(color: Color.fromARGB(255, 34, 177, 39), width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: Color.fromARGB(255, 34, 177, 39), width: 2),
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
@@ -71,7 +71,9 @@ class ForgotPassPage extends StatelessWidget {
                 child: Text("Confirm"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color.fromARGB(255, 232, 126, 162)),
+                      Color.fromARGB(174, 5, 117, 9)),
+                      foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 243, 241, 241)),
+
                 ),
               ),
               SizedBox(height: 10),

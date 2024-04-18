@@ -6,23 +6,27 @@ class Data_widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Center(
+       child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       
       children: [
         Column(
           children: [
-             Image.network("https://th.bing.com/th/id/R.626588307129b58ccc8316f2b5393c0b?rik=79Y0AWZPuRerug&pid=ImgRaw&r=0",
-      height: 90,
-      width: 90,
-      ),
+           
+             Image.network("assets/images/logojpg.jpg",
+                 height: 120,
+                width: 120,
+            
+                
+              ),
 
-      Text("Sign up here", style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,),)
-          ],
+             Text("Sign up here", style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold,),)
+              ],
       
      
       ),
-      SizedBox(height: 60),
+      SizedBox(height: 45),
 
         TextFormField(
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -30,6 +34,8 @@ class Data_widget extends StatelessWidget {
           keyboardType: TextInputType.name,
           validator:Rgisteration_validation().name_validate ,
           decoration: InputDecoration(
+             contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+               constraints: BoxConstraints(maxWidth: 450),
             label: Text("First Name"),
             hintText: "Enter your first name",
             prefix: Icon(Icons.abc),
@@ -38,11 +44,11 @@ class Data_widget extends StatelessWidget {
                 color: Colors.green,
                 width: 2
               ),
-              borderRadius: BorderRadius.circular(30)
+              borderRadius: BorderRadius.circular(25)
             ),
                focusedBorder:OutlineInputBorder(
               borderSide: BorderSide(
-                color: Colors.blue,
+                color: Color.fromARGB(255, 34, 177, 39),
                 width: 2
               ),
               borderRadius: BorderRadius.circular(10)
@@ -52,11 +58,11 @@ class Data_widget extends StatelessWidget {
                 color: Colors.red,
                 width: 2
               ),
-              borderRadius: BorderRadius.circular(30)
+              borderRadius: BorderRadius.circular(25)
             )
           ),
         ),
-        SizedBox(height: 50,),
+        SizedBox(height:22,),
          TextFormField(
           autovalidateMode: AutovalidateMode.onUserInteraction,
           controller: TextEditingController(),
@@ -64,9 +70,11 @@ class Data_widget extends StatelessWidget {
           validator:Rgisteration_validation().name_validate ,
           decoration:decoration.copyWith(
             labelText: "Last Name",
+            contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            constraints: BoxConstraints(maxWidth: 450),
           )
         ),
-                SizedBox(height: 50,),
+                SizedBox(height:22,),
 
           TextFormField(
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -74,13 +82,15 @@ class Data_widget extends StatelessWidget {
           keyboardType: TextInputType.name,
           validator:Rgisteration_validation_email().email_validate ,
           decoration:decoration.copyWith(
-            labelText: "Mail",
+            contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            constraints: BoxConstraints(maxWidth: 450),
+            labelText: "Email",
             hintText: "xxxxx @gmail.com",
             prefixIcon: Icon(Icons.mail),
 
           )
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 22),
             TextFormField(
 
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -88,6 +98,8 @@ class Data_widget extends StatelessWidget {
           keyboardType: TextInputType.name,
           validator:Rgisteration_validation_password().password_validate ,
           decoration:decoration.copyWith(
+            contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            constraints: BoxConstraints(maxWidth: 450),
             labelText: "Password",
             hintText: "Enter your password",
             prefixIcon: Icon(Icons.lock),
@@ -100,9 +112,10 @@ class Data_widget extends StatelessWidget {
 
         
       ],
-    );
+    ));
   }
   InputDecoration decoration=InputDecoration(
+    contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             hintText: "Enter your last name",
             prefix: Icon(Icons.abc),
             border:OutlineInputBorder(
@@ -110,11 +123,11 @@ class Data_widget extends StatelessWidget {
                 color: Colors.green,
                 width: 2
               ),
-              borderRadius: BorderRadius.circular(30)
+              borderRadius: BorderRadius.circular(25)
             ),
                focusedBorder:OutlineInputBorder(
               borderSide: BorderSide(
-                color: const Color.fromRGBO(33, 150, 243, 1),
+                color: Color.fromARGB(255, 34, 177, 39),
                 width: 2
               ),
               borderRadius: BorderRadius.circular(10)
@@ -124,7 +137,7 @@ class Data_widget extends StatelessWidget {
                 color: Colors.red,
                 width: 2
               ),
-              borderRadius: BorderRadius.circular(30)
+              borderRadius: BorderRadius.circular(15)
             ),
           );
 }

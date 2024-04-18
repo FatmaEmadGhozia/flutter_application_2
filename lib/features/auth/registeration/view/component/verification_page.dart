@@ -41,7 +41,7 @@ class _OTPPageState extends State<OTPPage> {
                 ),
               ),
             ),
-             SizedBox(height: 50),
+             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -52,8 +52,10 @@ class _OTPPageState extends State<OTPPage> {
               child: Text("Reset"),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                  const Color.fromARGB(255, 232, 126, 162),
+                  const Color.fromARGB(174, 5, 117, 9) ,
+            
                 ),
+                foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 243, 241, 241)),
               ),
             ),
             SizedBox(height: 10),

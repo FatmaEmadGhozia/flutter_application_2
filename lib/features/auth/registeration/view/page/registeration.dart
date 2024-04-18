@@ -12,7 +12,7 @@ class Rgister extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body:Data_widget() ,
-        bottomNavigationBar: SizedBox(child: BottomNavWidget(),height: 100,),
+        bottomNavigationBar: SizedBox(child: BottomNavWidget(),height: 70,),
       ),
     );
   }

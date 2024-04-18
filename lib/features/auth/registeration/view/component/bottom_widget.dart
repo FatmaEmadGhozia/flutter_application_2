@@ -6,58 +6,57 @@ class BottomNavWidget extends StatelessWidget {
   const BottomNavWidget({super.key});
 
   @override
-  Widget     build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         FilledButton(
             style: ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(
-                    const Color.fromARGB(255, 232, 126, 162))),
+                    const Color.fromARGB(174, 5, 117, 9))),
             onPressed: () {
-               Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => OTPPage()),
-                );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => OTPPage()),
+              );
             },
             child: Text("confirm")),
-        SizedBox(height: 10),
+        SizedBox(height: 11),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Have an Account?",
+             style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+             )
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => loginPage()),
-                );
-              },
-              child: TextButton(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => loginPage()),
+                  );
+                },
+                child: TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => loginPage()),
                     );
                   },
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 232, 126, 162),
-                        decoration: TextDecoration.underline,
-                        decorationColor: Color.fromARGB(
-                          255,
-                          232,
-                          126,
-                          162,
-                        )),
-                  )),
-            ),
+                  child: const Text("Login",
+                      style: TextStyle(
+                        color:Color.fromARGB(174, 5, 117, 9),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+              
+              
+                      )),
+                )),
           ],
-        )
+        ),
       ],
-
     );
   }
 }
